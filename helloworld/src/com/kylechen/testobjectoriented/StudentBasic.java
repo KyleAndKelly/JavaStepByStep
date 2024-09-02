@@ -51,4 +51,52 @@ public class StudentBasic {
         }
     }
 
+    //Inner class
+    public class InnerClass{
+        int height = 168;
+        public void testInner(){
+            System.out.println("now in inner class");
+        }
+
+    }
+
+    public static class StaticInnerClass{
+        int height = 168;
+        public void testInner(){
+            System.out.println("now in static inner class");
+        }
+
+    }
+
+    StudentStatus status;
+    public void setStatus(StudentStatus status) {
+        this.status = status;
+    }
+    public void checkStatus() {
+        switch (this.status){
+            case EAT:
+                System.out.println("EAT");
+                break;
+            case PLAY:
+                System.out.println("PLAY");
+                break;
+            case SLEEP:
+                System.out.println("SLEEP");
+                break;
+            case STUDY:
+                System.out.println("STUDY");
+                break;
+            default:
+                System.out.println("UNKNOWN");
+                break;
+        }
+
+    }
+};
+
+enum StudentStatus{
+    SLEEP,
+    EAT,
+    STUDY,
+    PLAY;
 }
